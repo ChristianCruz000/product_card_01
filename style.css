@@ -1,0 +1,219 @@
+/**********************************
+ CSS RESET
+***********************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "REM", sans-serif;
+}
+
+html {
+  /* turns 1rem into 10px */
+  font-size: 62.5%;
+}
+
+/**********************************
+ LAYOUT STYLES
+***********************************/
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      200deg,
+      rgba(173, 0, 14, 0.88),
+      rgba(32, 53, 65, 0.88)
+    ),
+    url("https://images.unsplash.com/photo-1635614017406-7c192d832072?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  width: 180rem;
+  height: 180rem;
+  border-radius: 50%;
+  background-color: #3b3f4b;
+  position: absolute;
+}
+
+.bg-1 {
+  left: -45%;
+  top: -10%;
+}
+
+.bg-2 {
+  right: -15%;
+  top: 33%;
+}
+
+.container__card {
+  width: 120rem;
+  height: 70rem;
+  background-color: #5c5e66;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers card */
+  border-radius: 1rem;
+  box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.4);
+}
+
+.card-bg-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; /* keeps it inside container */
+  border-radius: 1rem 0 0 1rem;
+}
+
+.card-bg {
+  width: 100%;
+  height: 200%;
+  background-color: #494a4e;
+  border: 8px solid #505361;
+  position: absolute;
+  left: -53%;
+  top: -50%;
+  transform: rotateZ(-40deg);
+  border-radius: 0 50% 50% 0;
+}
+
+/**********************************
+ CONTENT STYLES
+***********************************/
+
+.card-heading {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  font-size: 23rem;
+  font-weight: 700;
+  letter-spacing: 5rem;
+  text-transform: uppercase;
+  color: #77797d;
+  transform: translateX(-50%); /* centers element */
+}
+
+.container__card img {
+  z-index: 3;
+  position: absolute;
+  top: -5%;
+  left: -3%;
+  width: 50%;
+}
+
+.shadow-1 {
+  width: 20rem;
+  height: 60%;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+  border-radius: 0 50% 50% 0;
+  filter: blur(3rem);
+  opacity: 0.5;
+  transform: rotatetY(45deg);
+}
+
+.shadow-2 {
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  top: -2%;
+  left: 28%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+  border-radius: 50%;
+  filter: blur(3rem);
+  opacity: 0.5;
+}
+
+.card-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  padding: 5rem;
+}
+
+.main-heading {
+  font-size: 6.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin: 10.25rem 0 4.5rem -6rem;
+}
+
+.sub-heading {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  background-color: #52555d;
+  border-radius: 20px;
+  border: 1px solid #777;
+  display: inline-block;
+  padding: 3px 11px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card-content p {
+  font-size: 1.4rem;
+  color: #bbbbbb;
+  line-height: 1.3;
+  font-weight: 300;
+  width: 41rem;
+  margin: 1rem 0 5rem 3rem;
+}
+
+.price-bg {
+  position: absolute;
+  bottom: 5rem;
+  font-size: 12rem;
+  color: #77797d;
+  opacity: 0.5;
+}
+
+.price-main {
+  position: absolute;
+  bottom: 9.75rem;
+  left: 17.5rem;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 11rem;
+  right: 10rem;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 0.7rem;
+  border: none;
+  background: linear-gradient(to right, #e94f4f, #e42a2a);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card-btn:active {
+  transform: translateY(-0.2rem);
+}
